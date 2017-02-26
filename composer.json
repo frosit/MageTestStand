@@ -2,7 +2,8 @@
     "minimum-stability": "dev",
     "require": {
         "aoepeople/composer-installers": "*",
-        "ivanchepurnyi/ecomdev_phpunit": "dev-dev"
+        "ivanchepurnyi/ecomdev_phpunit": "dev-dev",
+        "n98/magerun": "dev-develop"
     },
     "config": {
         "bin-dir": "bin"
