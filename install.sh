@@ -50,7 +50,10 @@ if [ ! -f htdocs/app/etc/local.xml ] ; then
       sed -i -e s/MAGENTO_DB_NAME/${MAGENTO_DB_NAME}/g .modman/Aoe_TestSetup/app/etc/local.xml.phpunit
     fi
 
-    tools/n98-magerun.phar install \
+    wget https://files.magerun.net/n98-magerun.phar
+    chmod +x ./n98-magerun.phar
+
+    n98-magerun.phar install \
       --dbHost="${MAGENTO_DB_HOST}" --dbUser="${MAGENTO_DB_USER}" --dbPass="${MAGENTO_DB_PASS}" --dbName="${MAGENTO_DB_NAME}" --dbPort="${MAGENTO_DB_PORT}" \
       --installSampleData=no \
       --useDefaultConfigParams=yes \
@@ -65,4 +68,4 @@ fi
 
 tools/modman deploy-all --force
 
-tools/n98-magerun.phar --root-dir=htdocs config:set dev/template/allow_symlink 1
+n98-magerun.phar --root-dir=htdocs config:set dev/template/allow_symlink 1
