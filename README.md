@@ -52,10 +52,15 @@ env:
 #  global:
 #    - MAGENTO_DB_ALLOWSAME=1
 #    - SKIP_CLEANUP=1
-  - MAGENTO_VERSION=magento-ce-1.9.0.1
-  - MAGENTO_VERSION=magento-ce-1.8.1.0
-  - MAGENTO_VERSION=magento-ce-1.8.0.0
-  - MAGENTO_VERSION=magento-ce-1.7.0.2
+  - MAGENTO_VERSION=magento-mirror-1.5.1.0
+  - MAGENTO_VERSION=magento-mirror-1.5.1.0
+  - MAGENTO_VERSION=magento-mirror-1.6.2.0
+  - MAGENTO_VERSION=magento-mirror-1.7.0.2
+  - MAGENTO_VERSION=magento-mirror-1.8.1.0
+  - MAGENTO_VERSION=magento-mirror-1.9.2.1
+  - MAGENTO_VERSION=magento-mirror-1.9.2.4
+  - MAGENTO_VERSION=magento-mirror-1.9.3.0
+  - MAGENTO_VERSION=magento-mirror-1.9.3.1
 script:
   - curl -sSL https://raw.githubusercontent.com/AOEpeople/MageTestStand/master/setup.sh | bash
 notifications:
